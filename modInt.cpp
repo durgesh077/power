@@ -48,6 +48,8 @@ struct modInt
 	bool operator>=(modInt b)const{return val>=b.val;}
 	modInt operator++(){return *this=*this+1;}
 	modInt operator--(){return *this=*this-1;}
+        modInt operator++(int){auto tmp=*this; *this=*this+1;return tmp;}
+   	modInt operator--(int){auto tmp=*this; *this=*this-1;return tmp;}
 	void operator+=(modInt a){*this=*this+a;}
 	void operator-=(modInt a){*this=*this-a;}
 	void operator*=(modInt a){*this=*this*a;}
