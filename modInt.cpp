@@ -4,6 +4,8 @@ using namespace std;
 #define pb push_back
 vector<long long>_inv{1,1};
 template<int M=1000000007,int N=0>
+vector<long long>_inv{1,1};
+template<int M=1000000007,int N=0>
 struct modInt
 {
     long long val=0;
@@ -39,7 +41,7 @@ struct modInt
     modInt operator+(modInt b){return val+b.val;}
     modInt operator-(modInt b){return val-b.val;}
     modInt operator*(modInt b){return val*b.val;}
-    modInt operator/(modInt b){return val*_inv[b.val];}
+    modInt operator/(modInt b){return (b<=N)?val*_inv[b.val]:(b^(M-2))*val;}
     explicit operator bool(){return bool(val);}
     bool operator==(modInt b)const{return val==b.val;}
     bool operator>(modInt b)const{return val>b.val;}
@@ -134,5 +136,7 @@ int main()
         prev/=i;
         cout<<prev<<" ";
     }
+    modInt<107> d=1325245624;
+ 	cout<<d/d*d/d;
     //many more you can Explore your self
 }
