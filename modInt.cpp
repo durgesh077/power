@@ -1,9 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define pb push_back
-vector<long long>_inv{1,1};
-template<int M=1000000007,int N=0>
 vector<long long>_inv{1,1};
 template<int M=1000000007,int N=0>
 struct modInt
