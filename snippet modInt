@@ -30,7 +30,7 @@ struct modInt
             }
         }
     }
-    void operator=(long long a){val=a;val=(val+M)%M;}
+    void operator=(long long a){val=(a)%M;val=(val+M)%M;}
     long long& operator*(){return val;}
     modInt operator+(modInt b){return val+b.val;}
     modInt operator-(modInt b){return val-b.val;}
