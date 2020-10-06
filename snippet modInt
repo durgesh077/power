@@ -35,7 +35,7 @@ struct modInt
     modInt operator+(modInt b){return val+b.val;}
     modInt operator-(modInt b){return val-b.val;}
     modInt operator*(modInt b){return val*b.val;}
-    modInt operator/(modInt b){return val*_inv[b.val];}
+    modInt operator/(modInt b){return (b<=N)?val*_inv[b.val]:(b^(M-2))*val;}
     explicit operator bool(){return bool(val);}
     bool operator==(modInt b)const{return val==b.val;}
     bool operator>(modInt b)const{return val>b.val;}
